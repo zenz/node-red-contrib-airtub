@@ -1,0 +1,16 @@
+{
+  "name": "node-red-contrib-airtub",
+  "version": "1.0.0",
+  "description": "airtub msg handling",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Simon <simonhu@airfit.cn>",
+  "license": "Apache-2.0",
+  "node-red": {
+    "nodes": {
+      "decode": "decode.js",
+      "encode": "encode.js"
+    }
+  }
+}
