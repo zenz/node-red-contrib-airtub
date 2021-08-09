@@ -1,14 +1,14 @@
 <script type="text/javascript">
-  RED.nodes.registerType('decode',{
+  RED.nodes.registerType('decode', {
     category: 'function',
     color: '#a6bbcf',
     defaults: {
-      name: {value:""}
+      name: { value: "" }
     },
-    inputs:1,
-    outputs:1,
+    inputs: 1,
+    outputs: 1,
     icon: "function.png",
-    label: function() {
+    label: function () {
       return this.name || "decode";
     }
   });
@@ -23,4 +23,5 @@
 
 <script type="text/html" data-help-name="decode">
   <p>Decode msg from AIRTUB PARTNER</p>
+  <p>Please also provide msg.secret to decode the msg</p>
 </script>

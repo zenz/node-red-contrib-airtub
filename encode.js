@@ -1,13 +1,5 @@
 module.exports = function (RED) {
-  function xor_crypt(str, key) {
-    var output = "";
-    for (var i = 0; i < str.length;) {
-      for (var j = 0; (j < key.length && i < str.length); j++, i++) {
-        output += String.fromCharCode(str[i].charCodeAt(0) ^ key[j].charCodeAt(0));
-      }
-    }
-    return output;
-  }
+  const lib = require("./xor_crypt");
   function encodeMsg(config) {
     RED.nodes.createNode(this, config);
     var node = this;
@@ -16,7 +8,7 @@ module.exports = function (RED) {
       var str = msg.payload;
       str = str.substr(0, str.indexOf("}"));
       str = str + cmd;
-      str = xor_crypt(str, msg.secret);
+      str = lib.xor_crypt(str, msg.secret);
       var buff = new Buffer(str);
       str = buff.toString('base64');
       msg.payload = str
