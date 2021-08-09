@@ -12,6 +12,8 @@ module.exports = function (RED) {
       var buff = new Buffer(str);
       str = buff.toString('base64');
       msg.payload = str
+      if (msg.secret == "")
+        msg = {}
       node.send(msg);
     });
   }

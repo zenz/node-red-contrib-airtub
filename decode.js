@@ -9,6 +9,8 @@ module.exports = function (RED) {
       str = buff.toString('ascii');
       str = lib.xor_crypt(str, msg.secret);
       msg.payload = str;
+      if (msg.secret == "")
+        msg = {}
       node.send(msg);
     });
   }
