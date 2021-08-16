@@ -14,5 +14,5 @@ module.exports = function (RED) {
       node.send(msg);
     });
   }
-  RED.nodes.registerType("decode", decodeMsg);
+  RED.nodes.registerType("a-decode", decodeMsg);
 }

@@ -1,5 +1,5 @@
 <script type="text/javascript">
-  RED.nodes.registerType('encode', {
+  RED.nodes.registerType('a-encode', {
     category: 'function',
     color: '#a6bbcf',
     defaults: {
@@ -9,19 +9,19 @@
     outputs: 1,
     icon: "function.png",
     label: function () {
-      return this.name || "encode";
+      return this.name || "a-encode";
     }
   });
 </script>
 
-<script type="text/html" data-template-name="encode">
+<script type="text/html" data-template-name="a-encode">
   <div class="form-row">
     <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
     <input type="text" id="node-input-name" placeholder="Name">
   </div>
 </script>
 
-<script type="text/html" data-help-name="encode">
+<script type="text/html" data-help-name="a-encode">
   <p>Encode msg for AIRTUB PARTNER</p>
   <p>Please also provide msg.secret to encode the msg</p>
 </script>
