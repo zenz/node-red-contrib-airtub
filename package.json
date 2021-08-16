@@ -9,8 +9,8 @@
   "license": "Apache-2.0",
   "node-red": {
     "nodes": {
-      "decode": "decode.js",
-      "encode": "encode.js"
+      "a_decode": "decode.js",
+      "a_encode": "encode.js"
     }
   }
 }

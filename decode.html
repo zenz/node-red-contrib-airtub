@@ -1,5 +1,5 @@
 <script type="text/javascript">
-  RED.nodes.registerType('a-decode', {
+  RED.nodes.registerType('a_decode', {
     category: 'function',
     color: '#a6bbcf',
     defaults: {
@@ -9,19 +9,19 @@
     outputs: 1,
     icon: "function.png",
     label: function () {
-      return this.name || "a-decode";
+      return this.name || "a_decode";
     }
   });
 </script>
 
-<script type="text/html" data-template-name="a-decode">
+<script type="text/html" data-template-name="a_decode">
   <div class="form-row">
     <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
     <input type="text" id="node-input-name" placeholder="Name">
   </div>
 </script>
 
-<script type="text/html" data-help-name="a-decode">
+<script type="text/html" data-help-name="a_decode">
   <p>Decode msg from AIRTUB PARTNER</p>
   <p>Please also provide msg.secret to decode the msg</p>
 </script>
