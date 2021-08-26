@@ -7,11 +7,13 @@ module.exports = function (RED) {
       var str = msg.payload;
       var buff = new Buffer(str, 'base64');
       str = buff.toString('ascii');
-      str = lib.xor_crypt(str, msg.secret);
-      msg.payload = str;
-      if (msg.secret == "")
-        msg = {}
-      node.send(msg);
+      if (msg.secret != "") {
+        str = lib.xor_crypt(str, msg.secret);
+        if (str != ""){
+            msg.payload = str;
+            node.send(msg,false);
+        }
+      }
     });
   }
   RED.nodes.registerType("a_decode", decodeMsg);
